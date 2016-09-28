@@ -14,7 +14,7 @@ class LoginController {
     // Authentication
     //   .login(this.credentials)
     //   .then(redirect);
-  };
+  }
 
   // function redirect() {
   //   $state.go('app.home');
