@@ -1,0 +1,1 @@
+{"version":3,"sources":["app.scss"],"names":[],"mappings":"AAGA,KACE,mCACA,iCAAmC,CACpC","file":"app.css","sourcesContent":["/* inject:imports */\n/* endinject */\n\nbody {\n  -webkit-font-smoothing: antialiased;\n  font-family: helvetica, sans-serif;\n}\n"],"sourceRoot":"/source/"}

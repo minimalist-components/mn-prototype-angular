@@ -2,6 +2,16 @@
 
 This is an application prototype, based with angular, and using mn-components to UI.
 
+## Todos
+
+- [ ] login view
+- [ ] sidenav, toolbar
+- [ ] list view
+- [ ] form view
+
+
+## Demo
+
 If you want view a demo, just clone/fork this repo, and:
 
 ```sh

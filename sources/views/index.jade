@@ -1,0 +1,14 @@
+doctype html
+html(ng-app='prototype')
+  head
+    title prototype
+    base(href="/")
+
+    include templates/metas
+    include templates/favicons
+    include templates/styles
+
+  body
+    div(ui-view='main')
+
+    include templates/scripts
