@@ -1,1 +1,3 @@
-p login template
+form(name='form' ng-submit='form.$valid && login.authenticate()')
+  mn-input(placeholder='Username', ng-model='login.credentials.username')
+  mn-input(placeholder='Password', type='password', ng-model='login.credentials.password')

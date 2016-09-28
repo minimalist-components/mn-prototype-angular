@@ -8,6 +8,8 @@ function loginConfig($stateProvider) {
     views: {
       'main': {
         templateUrl: 'templates/login.template.html',
+        controller: 'LoginController',
+        controllerAs: 'login',
       },
     },
   });
