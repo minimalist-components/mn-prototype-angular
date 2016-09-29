@@ -10,6 +10,12 @@ html {
   background: linear-gradient(135deg, #6420b3, #02c9c9);
   -webkit-background-clip: text;
   user-select: none;
+  text-align: center;
+
+  small {
+    font-size: .5em;
+    display: block;
+  }
 }
 
 .mn-button {
