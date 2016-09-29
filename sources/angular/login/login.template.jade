@@ -1,4 +1,6 @@
-form(name='form' ng-submit='form.$valid && login.authenticate()', novalidate, spellcheck='false')
-  mn-input(placeholder='Username', ng-model='login.credentials.username', required)
-  mn-input(placeholder='Password', type='password', ng-model='login.credentials.password', required)
-  button(type='submit') submit
+.fullpage.centered.content
+  h2.logotipo Prototype
+  form(name='form' ng-submit='form.$valid && login.authenticate()', novalidate, spellcheck='false')
+    mn-input(placeholder='username', ng-model='login.credentials.username', required)
+    mn-input(placeholder='password', type='password', ng-model='login.credentials.password', required)
+    button.mn-button.raised(type='submit') login

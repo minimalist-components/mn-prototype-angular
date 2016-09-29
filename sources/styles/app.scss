@@ -1,7 +1,7 @@
 /* inject:imports */
 /* endinject */
 
-body {
-  -webkit-font-smoothing: antialiased;
-  font-family: helvetica, sans-serif;
-}
+@import 'components/reset';
+@import 'components/typography';
+@import 'components/fullpage';
+@import 'components/identity';
