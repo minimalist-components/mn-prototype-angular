@@ -17,3 +17,20 @@ html {
   background: linear-gradient(135deg, #6420b3, #02c9c9);
   -webkit-background-clip: text;
 }
+
+$mn-warning-color: (
+  50 : #FCE4EC,
+  100: #F8BBD0,
+  200: #F48FB1,
+  300: #F06292,
+  400: #FF3F63,
+  500: #df3757,
+  600: #D81B60,
+  700: #C2185B,
+  800: #AD1457,
+  900: #880E4F,
+  a100: #FF80AB,
+  a200: #FF4081,
+  a400: #F50057,
+  a700: #C51162
+);
