@@ -14,6 +14,8 @@ This is an application prototype, based with angular, and using mn-components to
 
 If you want view a demo, just clone/fork this repo, and:
 
+[![preview login mobile](https://raw.githubusercontent.com/minimalist-components/mn-prototype-angular/master/previews/login/login.mobile.gif)](http://codepen.io/darlanmendonca/full/akgXQq)
+
 ```sh
 # install dependencies, and prepare theirs to front
 npm i && bower i && gulp vendorCSS vendorJS
