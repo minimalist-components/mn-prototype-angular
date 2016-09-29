@@ -12,9 +12,9 @@ This is an application prototype, based with angular, and using mn-components to
 
 ## Demo
 
-If you want view a demo, just clone/fork this repo, and:
-
 [![preview login mobile](https://raw.githubusercontent.com/minimalist-components/mn-prototype-angular/master/previews/login/login.mobile.png)](https://raw.githubusercontent.com/minimalist-components/mn-prototype-angular/master/previews/login/login.mobile.png)
+
+If you want view a demo, just clone/fork this repo, and:
 
 ```sh
 # install dependencies, and prepare theirs to front
