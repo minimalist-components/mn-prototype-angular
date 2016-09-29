@@ -1,5 +1,4 @@
 import browserSync from 'browser-sync';
-import historyApi from 'connect-history-api-fallback';
 import yargs from 'yargs';
 
 module.exports = {
@@ -39,7 +38,6 @@ module.exports = {
       baseDir: './public',
     },
     notify: false,
-    middleware: [ historyApi() ],
     reloadDelay: 100,
     open: yargs.argv.open,
   },
