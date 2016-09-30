@@ -1,7 +1,7 @@
-.fullpage.centered.content
+.fullscreen.layout-centered
   h2.logotipo Prototype
 
-  form(name='form' ng-submit='form.$valid && login.authenticate()', novalidate, spellcheck='false')
+  form.layout-column(name='form' ng-submit='form.$valid && login.authenticate()', novalidate, spellcheck='false')
     mn-input(placeholder='username', name='username', ng-model='login.credentials.username', required)
     mn-input(placeholder='password', name='password', ng-model='login.credentials.password', required, type='password')
     
