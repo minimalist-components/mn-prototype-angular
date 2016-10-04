@@ -5,7 +5,8 @@
     "angular": "^1.5.8",
     "angular-ui-router": "^0.2.15",
     "angular-mn-input": "^0.0.17",
-    "mn-buttons": "mn-button#^1.0.1"
+    "mn-buttons": "mn-button#^1.0.1",
+    "mn-layout": "^0.0.1"
   },
   "devDependencies": {
     "angular-mocks": "^1.5.8"
