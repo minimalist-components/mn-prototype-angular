@@ -32,6 +32,10 @@ module.exports = {
     src: './sources/sprites/*.png',
     dest: './public/imgs/sprites/',
   },
+  fonts: {
+    src: './sources/fonts/**',
+    dest: './public/fonts',
+  },
   browserSync: browserSync.create(),
   browserSyncOptions: {
     server: {

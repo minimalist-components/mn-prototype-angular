@@ -6,7 +6,7 @@
     "angular-ui-router": "^0.2.15",
     "angular-mn-input": "^0.0.21",
     "mn-buttons": "mn-button#^1.0.1",
-    "mn-layout": "^0.0.2",
+    "mn-layout": "^0.0.3",
     "satellizer": "^0.15.5"
   },
   "devDependencies": {
