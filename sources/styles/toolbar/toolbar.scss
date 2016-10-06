@@ -1,0 +1,14 @@
+.toolbar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 3em;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  z-index: 100;
+
+  & + * {
+    min-height: calc(100vh - 3em);
+    margin-top: 3em;
+  }
+}
