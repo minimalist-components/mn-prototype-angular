@@ -1,13 +1,13 @@
 angular
   .module('prototype')
-  .run(loginRun);
+  .run(LoginRun);
 
-function loginRun($rootScope, $state) {
+function LoginRun($rootScope, $state, AuthenticationService) {
   $rootScope.$on('$stateChangeStart', requireAuthentication);
 
   function requireAuthentication(event, toState) {
     let stateRequireLogin = toState.name.startsWith('app.');
-    let isAuthenticated = false; // Authentication.status();
+    let isAuthenticated = AuthenticationService.status();
 
     if (stateRequireLogin && !isAuthenticated) {
       event.preventDefault();

@@ -1,8 +1,8 @@
 angular
   .module('prototype')
-  .config(loginConfig);
+  .config(LoginConfig);
 
-function loginConfig($stateProvider) {
+function LoginConfig($stateProvider) {
   $stateProvider.state('login', {
     url: '/login',
     views: {

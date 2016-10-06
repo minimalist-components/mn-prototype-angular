@@ -7,5 +7,10 @@ function appConfig($locationProvider, $stateProvider) {
 
   $stateProvider.state('app', {
     abstract: true,
+    views: {
+      main: {
+        templateUrl: 'templates/app.template.html',
+      },
+    },
   });
 }

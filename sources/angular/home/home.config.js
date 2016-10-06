@@ -1,12 +1,12 @@
 angular
   .module('prototype')
-  .config(homeConfig);
+  .config(HomeConfig);
 
-function homeConfig($stateProvider) {
+function HomeConfig($stateProvider) {
   $stateProvider.state('app.home', {
     url: '/',
     views: {
-      'main': {
+      'content@app': {
         templateUrl: 'templates/home.template.html',
       },
     },
