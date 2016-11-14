@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import babel from 'gulp-babel';
 import sourcemaps from 'gulp-sourcemaps';
-import config from './gulp.config.js';
+import config from './config.js';
 import plumber from 'gulp-plumber';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';

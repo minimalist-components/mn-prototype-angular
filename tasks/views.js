@@ -2,7 +2,7 @@ import gulp from 'gulp';
 import gutil from 'gulp-util';
 import jade from 'gulp-jade';
 import flatten from 'gulp-flatten';
-import config from './gulp.config.js';
+import config from './config.js';
 import plumber from 'gulp-plumber';
 
 gulp.task('views', viewsTask);

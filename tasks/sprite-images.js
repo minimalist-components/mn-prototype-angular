@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import spritesmith from 'gulp.spritesmith';
 import plumber from 'gulp-plumber';
-import config from './gulp.config.js';
+import config from './config.js';
 
 let options = {
   imgName: 'sprites.png',

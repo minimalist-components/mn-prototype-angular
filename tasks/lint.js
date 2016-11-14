@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import config from './gulp.config.js';
+import config from './config.js';
 import eslint from 'gulp-eslint';
 import gutil from 'gulp-util';
 

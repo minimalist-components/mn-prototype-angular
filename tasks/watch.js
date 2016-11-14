@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import gulpConfig from './gulp.config.js';
+import gulpConfig from './config.js';
 
 gulp.task('watch', watchTask);
 
@@ -8,7 +8,7 @@ function watchTask() {
     'templates',
     gulpConfig.browserSync.reload
   ]);
-  
+
   gulp.watch(gulpConfig.views.watch, [
     'views',
     gulpConfig.browserSync.reload

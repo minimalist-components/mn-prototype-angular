@@ -28,6 +28,10 @@ module.exports = {
     ],
     dest: './public/scripts/',
   },
+  fonts: {
+    src: './sources/fonts/*',
+    dest: './public/fonts/',
+  },
   sprites: {
     src: './sources/sprites/*.png',
     dest: './public/imgs/sprites/',

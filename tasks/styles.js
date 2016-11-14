@@ -7,7 +7,7 @@ import util from 'util';
 import sass from 'gulp-sass';
 import autoprefixer from 'gulp-autoprefixer';
 import sourcemaps from 'gulp-sourcemaps';
-import config from './gulp.config.js';
+import config from './config.js';
 import plumber from 'gulp-plumber';
 
 let injectTransform = {
