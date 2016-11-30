@@ -1,9 +1,9 @@
 angular
   .module('prototype')
-  .config(appConfig);
+  .config(appConfig)
 
 function appConfig($locationProvider, $stateProvider) {
-  $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true)
 
   $stateProvider.state('app', {
     abstract: true,
@@ -12,5 +12,5 @@ function appConfig($locationProvider, $stateProvider) {
         templateUrl: 'templates/app.template.html',
       },
     },
-  });
+  })
 }

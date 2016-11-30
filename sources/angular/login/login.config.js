@@ -1,6 +1,6 @@
 angular
   .module('prototype')
-  .config(LoginConfig);
+  .config(LoginConfig)
 
 function LoginConfig($stateProvider) {
   $stateProvider.state('login', {
@@ -12,6 +12,6 @@ function LoginConfig($stateProvider) {
         controllerAs: 'login',
       },
     },
-  });
+  })
 }
 

@@ -1,30 +1,37 @@
-import gulp from 'gulp';
-import gulpConfig from './config.js';
+import gulp from 'gulp'
+import {
+  browserSync,
+  views,
+  styles,
+  scripts,
+  templates,
+  lint,
+} from './config.js'
 
-gulp.task('watch', watchTask);
+gulp.task('watch', watchTask)
 
 function watchTask() {
-  gulp.watch(gulpConfig.templates.src, [
+  gulp.watch(templates.src, [
     'templates',
-    gulpConfig.browserSync.reload
-  ]);
+    browserSync.reload,
+  ])
 
-  gulp.watch(gulpConfig.views.watch, [
+  gulp.watch(views.watch, [
     'views',
-    gulpConfig.browserSync.reload
-  ]);
+    browserSync.reload,
+  ])
 
-  gulp.watch(gulpConfig.styles.watch, ['styles']);
+  gulp.watch(styles.watch, ['styles'])
 
-  gulp.watch(gulpConfig.scripts.src, [
+  gulp.watch(scripts.src, [
     'scripts',
-    gulpConfig.browserSync.reload
-  ]);
-  gulp.watch(gulpConfig.lint, ['lint']);
+    browserSync.reload,
+  ])
+  gulp.watch(lint, ['lint'])
 
   gulp.watch('./bower.json', [
     'vendorCSS',
     'vendorJS',
-    'styles'
-  ]);
+    'styles',
+  ])
 }

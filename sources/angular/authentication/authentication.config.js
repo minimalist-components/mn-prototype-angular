@@ -1,11 +1,11 @@
 angular
   .module('prototype')
-  .config(AuthenticationConfig);
+  .config(AuthenticationConfig)
 
 function AuthenticationConfig($authProvider) {
-  $authProvider.loginUrl = '';
-  $authProvider.authHeader = 'Authorization';
-  $authProvider.tokenType = 'Bearer';
-  $authProvider.authToken = '';
-  $authProvider.storageType = 'localStorage';
+  $authProvider.loginUrl = ''
+  $authProvider.authHeader = 'Authorization'
+  $authProvider.tokenType = 'Bearer'
+  $authProvider.authToken = ''
+  $authProvider.storageType = 'localStorage'
 }

@@ -1,25 +1,25 @@
 angular
   .module('prototype')
-  .controller('LoginController', LoginController);
+  .controller('LoginController', LoginController)
 
 function LoginController(AuthenticationService, $state) {
-  let username;
-  let password;
+  let username
+  let password
 
   this.credentials = {
     username,
     password,
-  };
+  }
 
-  this.authenticate = authenticate;
+  this.authenticate = authenticate
 
   function authenticate() {
     AuthenticationService
       .login(this.credentials)
-      .then(redirectToHome);
+      .then(redirectToHome)
 
     function redirectToHome() {
-      $state.go('app.home');
+      $state.go('app.home')
     }
   }
 }

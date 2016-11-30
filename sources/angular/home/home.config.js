@@ -1,6 +1,6 @@
 angular
   .module('prototype')
-  .config(HomeConfig);
+  .config(HomeConfig)
 
 function HomeConfig($stateProvider) {
   $stateProvider.state('app.home', {
@@ -10,5 +10,5 @@ function HomeConfig($stateProvider) {
         templateUrl: 'templates/home.template.html',
       },
     },
-  });
+  })
 }

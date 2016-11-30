@@ -1,4 +1,4 @@
-import shell from 'shell-arguments';
+import shell from 'shell-arguments'
 
 let config = {
   development: {
@@ -19,11 +19,11 @@ let config = {
       proxy: 5005
     }
   }
-};
+}
 
 
 let env = shell.env
   || process.env.NODE_ENV
-  || 'production';
+  || 'production'
 
-module.exports = config[env];
+module.exports = config[env]
