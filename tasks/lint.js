@@ -1,13 +1,15 @@
 import gulp from 'gulp'
-import config from './config.js'
+import {lint} from './config.js'
 import eslint from 'gulp-eslint'
 import gutil from 'gulp-util'
+import cache from 'gulp-cached'
 
 gulp.task('lint', lintTask)
 
 function lintTask() {
   return gulp
-    .src(config.lint)
+    .src(lint)
+    .pipe(cache('linting'))
     .pipe(eslint())
     .pipe(eslint.format())
     .pipe(eslint.failAfterError())

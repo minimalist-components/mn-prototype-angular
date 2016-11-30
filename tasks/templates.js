@@ -2,18 +2,20 @@ import gulp from 'gulp'
 import gutil from 'gulp-util'
 import jade from 'gulp-jade'
 import flatten from 'gulp-flatten'
-import config from './config.js'
+import {templates} from './config.js'
 import plumber from 'gulp-plumber'
+import changed from 'gulp-changed'
 
 gulp.task('templates', templatesTask)
 
 function templatesTask() {
   return gulp
-    .src(config.templates.src)
+    .src(templates.src)
+    .pipe(changed(templates.dest))
     .pipe(plumber({errorHandler}))
     .pipe(jade())
     .pipe(flatten())
-    .pipe(gulp.dest(config.templates.dest))
+    .pipe(gulp.dest(templates.dest))
 }
 
 function errorHandler(err) {
