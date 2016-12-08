@@ -4,4 +4,5 @@ angular.module('prototype', [
   'mn-form',
   'mn-input',
   'restangular',
+  'angular-loading-bar',
 ])
