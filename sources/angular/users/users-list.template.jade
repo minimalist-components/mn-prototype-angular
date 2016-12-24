@@ -2,6 +2,6 @@
   h2 Users list
 
   .mn-table-list.mn-card
-    a.mn-item(href='#' ng-repeat='user in users.list')
+    a.mn-item(ui-sref='app.users.edit({id: user.id})' ng-repeat='user in users.list')
       span {{ :: user.name }}
       span {{ :: user.email }}

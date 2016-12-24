@@ -3,11 +3,16 @@ angular
   .service('Users', UsersService)
 
 function UsersService(Restangular) {
-  const resource = Restangular.all('users')
+  const resource = Restangular.service('users')
 
   this.list = list
+  this.get = get
 
   function list() {
     return resource.getList()
+  }
+
+  function get(id) {
+    return resource.one(id).get()
   }
 }
