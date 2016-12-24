@@ -1,5 +1,6 @@
 .layout-container
   h2 User
 
-  .mn-card
-    p test
+  .mn-card.layout-row
+    mn-input.flex(name='name' placeholder='Name' ng-model='users.data.name' required)
+    mn-input.flex(name='email' placeholder='Email' type='email' ng-model='users.data.email' required)
