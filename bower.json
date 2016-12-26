@@ -4,7 +4,7 @@
   "dependencies": {
     "angular": "1.6.1",
     "angular-ui-router": "0.2.15",
-    "angular-mn-input": "0.0.27",
+    "angular-mn-input": "0.0.28",
     "mn-layout": "0.0.9",
     "satellizer": "0.15.5",
     "mn-button": "0.0.5",

@@ -1,7 +1,7 @@
 .layout-container
   h2 User
 
-  mn-form
+  mn-form(submit='users.save()')
     .mn-card.padding
       .layout-column.layout-sm-row
         mn-input.flex(name='name' placeholder='name' ng-model='users.data.name' required)
