@@ -15,7 +15,7 @@
     "restangular": "1.5.2",
     "underscore": "1.8.3",
     "angular-loading-bar": "0.9.0",
-    "angular-mn-sidenav": "^0.0.1",
+    "angular-mn-sidenav": "0.0.2",
     "open-color": "^1.4.1"
   },
   "devDependencies": {
