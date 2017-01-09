@@ -5,7 +5,7 @@
   height: 3em;
   border-bottom: 1px solid #ced4da;
   overflow: auto;
-  z-index: 100;
+  z-index: 5;
   box-sizing: border-box;
   padding: 0 1em;
   align-items: center;
@@ -14,7 +14,6 @@
 
   & + * {
     min-height: calc(100vh - 3em);
-    margin-top: 3em;
   }
 
   * {margin: 0}
