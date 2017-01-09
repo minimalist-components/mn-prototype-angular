@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "start": "scripts/start.sh",
     "test": "scripts/test"
   },
   "devDependencies": {
