@@ -1,0 +1,23 @@
+[ui-view='content'].ng-enter {
+  animation: fadeInDown .5s ease
+}
+
+[ui-view='content'].ng-leave {
+  display: none;
+}
+
+@keyframes fadeInDown {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0
+  }
+
+  15% {
+    opacity: 0
+  }
+
+  100% {
+    transform: none;
+    opacity: 1
+  }
+}

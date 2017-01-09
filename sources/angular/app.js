@@ -6,4 +6,5 @@ angular.module('prototype', [
   'mn-input',
   'restangular',
   'angular-loading-bar',
+  'ngAnimate',
 ])
