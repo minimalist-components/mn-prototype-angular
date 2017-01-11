@@ -9,6 +9,27 @@
           
       .layout-column.layout-sm-row
         mn-input.flex(name='email' placeholder='email' type='email' ng-model='users.data.email' required)
+          
+        mn-select.flex-sm(placeholder='House')
+          option(value='stark') Stark
+          option(value='targaryen') Targaryen
+          option(value='lannister') Lannister
+          option(value='tyrell') Tyrell
+          option(value='baratheon') Baratheon
+          option(value='bolton') Bolton
+          option(value='martell') Martell
+          option(value='tully') Tully
+          option(value='arryn') Arryn
+          option(value='mormont') Mormont
+          option(value='greyjoy') Greyjoy
+          option(value='frey') Frey
+          option(value='forrester') Forrester
+          option(value='karstark') Karstark
+          option(value='from') from the North
+          option(value='from') from the Vale
+          option(value='lannister') Lannister
+          option(value='from') from Dorne
+          option(value='targaryen') Targaryen
 
     div.layout-row.align-end
       button.mn-button(ui-sref='^') Cancel
