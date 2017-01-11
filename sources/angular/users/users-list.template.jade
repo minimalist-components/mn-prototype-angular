@@ -2,7 +2,7 @@
   h2 Users list
 
   .mn-table-list.mn-card
-    button.mn-button.action.raised: i.zmdi.zmdi-plus
+    button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
     a.mn-item(ui-sref='app.users.edit({id: user.id})' ng-repeat='user in users.list')
       span {{ :: user.name }}
       span {{ :: user.email }}

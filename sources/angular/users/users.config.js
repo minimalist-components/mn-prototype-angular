@@ -18,6 +18,20 @@ function UsersConfig($stateProvider) {
         },
       },
     })
+    .state('app.users.create', {
+      url: '/create',
+      views: {
+        'content@app': {
+          templateUrl: 'templates/users-form.template.html',
+          controller: 'UsersController',
+          controllerAs: 'users',
+          resolve: {
+            list: () => null,
+            data: () => null,
+          },
+        },
+      },
+    })
     .state('app.users.edit', {
       url: '/:id',
       views: {
