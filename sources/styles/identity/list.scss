@@ -1,0 +1,15 @@
+.mn-card.mn-table-list {position: relative}
+
+.mn-card .mn-button.action.raised {
+  position: absolute;
+  right: 0;
+  top: 2.5em;
+
+  @media (min-width: 767px) {
+    transform: translate(0, 0);
+  }
+
+  @media (min-width: 768px) {
+    transform: translate(50%, 0);
+  }
+}
