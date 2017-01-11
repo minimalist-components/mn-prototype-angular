@@ -3,7 +3,7 @@ import spritesmith from 'gulp.spritesmith'
 import plumber from 'gulp-plumber'
 import config from './config.js'
 
-let options = {
+const options = {
   imgName: 'sprites.png',
   cssName: 'sprite-vars.scss',
   imgPath: '../imgs/sprites/sprites.png',
@@ -15,7 +15,7 @@ let options = {
 gulp.task('sprites', spritesTask)
 
 function spritesTask() {
-  let sprite = gulp
+  const sprite = gulp
     .src(config.sprites.src)
     .pipe(plumber())
     .pipe(spritesmith(options))

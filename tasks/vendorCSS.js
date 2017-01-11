@@ -6,7 +6,7 @@ import concat from 'gulp-concat'
 gulp.task('vendorCSS', vendorCSSTask)
 
 function vendorCSSTask() {
-  let dependencies = bowerFiles()
+  const dependencies = bowerFiles()
     .ext('css')
     .files
 

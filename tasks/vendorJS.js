@@ -6,7 +6,7 @@ import uglify from 'gulp-uglify'
 gulp.task('vendorJS', vendorJSTask)
 
 function vendorJSTask() {
-  let dependencies = bowerFiles()
+  const dependencies = bowerFiles()
     .ext('js')
     .files
 

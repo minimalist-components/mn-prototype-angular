@@ -9,23 +9,23 @@ import sourcemaps from 'gulp-sourcemaps'
 import config from './config.js'
 import plumber from 'gulp-plumber'
 
-let injectTransform = {
+const injectTransform = {
   starttag: '/* inject:imports */',
   endtag: '/* endinject */',
   transform: filepath => `@import '../..${filepath}';`,
 }
 
-let injectConfig = {
+const injectConfig = {
   read: false,
   relative: false,
 }
 
-let outputStyle = 'compressed'
+const outputStyle = 'compressed'
 
 gulp.task('styles', stylesTask)
 
 function stylesTask() {
-  let dependencies = bowerFiles()
+  const dependencies = bowerFiles()
     .relative(path.join(__dirname, '..'))
     .ext('scss')
     .files
@@ -43,7 +43,7 @@ function stylesTask() {
 }
 
 function errorHandler(err) {
-  let message = new gutil.PluginError(err.plugin, err.message).toString()
+  const message = new gutil.PluginError(err.plugin, err.message).toString()
   process.stderr.write(message + '\n')
   gutil.beep()
 }
