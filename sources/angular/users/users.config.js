@@ -27,7 +27,7 @@ function UsersConfig($stateProvider) {
           controllerAs: 'users',
           resolve: {
             list: () => null,
-            data: () => null,
+            data: (Users) => Users.create()
           },
         },
       },

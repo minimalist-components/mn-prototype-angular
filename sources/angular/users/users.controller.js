@@ -5,10 +5,4 @@ angular
 function UsersController(list, data) {
   this.list = list
   this.data = data
-
-  this.save = save
-
-  function save() {
-    console.log(this.data)
-  }
 }

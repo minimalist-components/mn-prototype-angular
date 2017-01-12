@@ -7,6 +7,7 @@ function UsersService(Restangular) {
 
   this.list = list
   this.get = get
+  this.create = create
 
   function list() {
     return resource.getList()
@@ -14,5 +15,9 @@ function UsersService(Restangular) {
 
   function get(id) {
     return resource.one(id).get()
+  }
+
+  function create() {
+    return resource.one()
   }
 }
