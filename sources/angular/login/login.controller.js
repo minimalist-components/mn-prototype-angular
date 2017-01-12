@@ -3,11 +3,11 @@ angular
   .controller('LoginController', LoginController)
 
 function LoginController(AuthenticationService, $state) {
-  let username
+  let email
   let password
 
   this.credentials = {
-    username,
+    email,
     password,
   }
 

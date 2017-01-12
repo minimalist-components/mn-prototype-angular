@@ -3,5 +3,5 @@ angular
   .config(ApiConfig)
 
 function ApiConfig(RestangularProvider) {
-  RestangularProvider.setBaseUrl('https://private-a82ea-samples9.apiary-mock.com')
+  RestangularProvider.setBaseUrl('http://localhost:4000')
 }

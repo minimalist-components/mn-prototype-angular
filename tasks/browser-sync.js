@@ -10,5 +10,6 @@ function browserSyncTask() {
     historyApi(),
     gzip(),
   ]
+
   browserSync.init(browserSyncOptions)
 }
