@@ -2,7 +2,7 @@ angular
   .module('prototype')
   .controller('LoginController', LoginController)
 
-function LoginController(AuthenticationService, $state) {
+function LoginController(Authentication, $state) {
   let email
   let password
 
@@ -14,7 +14,7 @@ function LoginController(AuthenticationService, $state) {
   this.authenticate = authenticate
 
   function authenticate() {
-    AuthenticationService
+    Authentication
       .login(this.credentials)
       .then(redirectToHome)
 

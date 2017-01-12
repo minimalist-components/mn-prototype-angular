@@ -1,8 +1,8 @@
 angular
   .module('prototype')
-  .service('AuthenticationService', AuthenticationService)
+  .service('Authentication', Authentication)
 
-function AuthenticationService($auth) {
+function Authentication($auth) {
   this.login = user => $auth.login(user)
   this.logout = () => $auth.logout()
   this.status = () => $auth.isAuthenticated()
