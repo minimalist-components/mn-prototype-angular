@@ -7,7 +7,7 @@ function ApiRun(Restangular, $state) {
 
   function redirectToParentState(data, operation) {
     if (operation === 'put' || operation === 'post') {
-      $state.go('^', null, {reload: true})
+      $state.go('^', {}, {reload: true})
     }
     return data
   }

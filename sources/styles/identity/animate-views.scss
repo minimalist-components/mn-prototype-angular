@@ -1,8 +1,8 @@
-[ui-view='content'].ng-enter {
+[ui-view].ng-enter {
   animation: fadeInDown .5s ease
 }
 
-[ui-view='content'].ng-leave {
+[ui-view].ng-leave {
   display: none;
 }
 
