@@ -4,6 +4,7 @@ angular.module('prototype', [
   'satellizer',
   'mn-form',
   'mn-input',
+  'mn-password',
   'restangular',
   'angular-loading-bar',
   'ngAnimate',

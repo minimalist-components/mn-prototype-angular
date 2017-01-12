@@ -5,6 +5,7 @@
     "angular": "^1.6.1",
     "angular-ui-router": "0.3.2",
     "angular-mn-input": "^0.0.30",
+    "angular-mn-password": "^0.0.1",
     "mn-layout": "^0.0.16",
     "satellizer": "0.15.5",
     "mn-button": "^0.0.10",
