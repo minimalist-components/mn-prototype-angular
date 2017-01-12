@@ -2,4 +2,4 @@
 
 set -e
 
-./node_modules/gulp/bin/gulp.js
+./node_modules/gulp/bin/gulp.js --silent
