@@ -8,7 +8,6 @@ function LoginRun($rootScope, $state, AuthenticationService) {
   function requireAuthentication(event, toState) {
     let stateRequireLogin = toState.name.startsWith('app.')
     let isAuthenticated = AuthenticationService.status()
-    return false
 
     if (stateRequireLogin && !isAuthenticated) {
       event.preventDefault()

@@ -4,8 +4,9 @@
   mn-form(submit='users.save()')
     .mn-card.padding
       .layout-column.layout-sm-row
-        mn-input.flex(name='name' placeholder='name' ng-model='users.data.name' required)
-        mn-input.flex(name='id' placeholder='username' ng-model='users.data.id' required)
+        mn-input.flex(name='username' placeholder='username' ng-model='users.data.username' required)
+        mn-input.flex(name='firstname' placeholder='firstname' ng-model='users.data.firstname' required)
+        mn-input.flex(name='lastname' placeholder='lastname' ng-model='users.data.lastname' required)
           
       .layout-column.layout-sm-row
         mn-input.flex(name='email' placeholder='email' type='email' ng-model='users.data.email' required)

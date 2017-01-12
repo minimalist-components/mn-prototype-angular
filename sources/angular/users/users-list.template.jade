@@ -3,7 +3,7 @@
 
   .mn-table-list.mn-card
     button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
-    a.mn-item(ui-sref='app.users.edit({id: user.id})' ng-repeat='user in users.list')
+    a.mn-item(ui-sref='app.users.edit({id: user.username})' ng-repeat='user in users.list')
       span {{ :: user.firstname }} {{ :: user.lastname }}
       span {{ :: user.email }}
 

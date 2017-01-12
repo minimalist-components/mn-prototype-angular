@@ -41,7 +41,7 @@ function UsersConfig($stateProvider) {
           controllerAs: 'users',
           resolve: {
             list: () => null,
-            data: Users => Users.get('johnsnow')
+            data: (Users, $stateParams) => Users.get($stateParams.id)
           },
         },
       },
