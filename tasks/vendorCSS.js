@@ -8,6 +8,7 @@ gulp.task('vendorCSS', vendorCSSTask)
 function vendorCSSTask() {
   const dependencies = bowerFiles()
     .ext('css')
+    .match('!**/open-color.css')
     .files
 
   return gulp
