@@ -20,7 +20,8 @@
     "open-color": "^1.4.1",
     "ui.router.redirect": "^0.0.2",
     "angular-animate": "^1.6.1",
-    "mn-select": "^0.0.9"
+    "mn-select": "^0.0.9",
+    "angular-mn-select": "^0.0.1"
   },
   "devDependencies": {
     "angular-mocks": "1.6.1"

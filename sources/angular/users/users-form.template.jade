@@ -14,7 +14,6 @@
         mn-select.flex-sm(placeholder='House' ng-model='users.data.house' required)
           option(ng-repeat='option in users.options' ng-value='option.value') {{ option.name }}
 
-
       //- .layout-column.layout-sm-row(ng-show='!users.data._id')
         mn-password.flex(name='password' placeholder='password' ng-model='users.data.password' required)
         mn-password.flex(name='confirmPassword' placeholder='confirm password' ng-model='confirmPassword' required)

@@ -5,6 +5,7 @@ angular.module('prototype', [
   'mn-form',
   'mn-input',
   'mn-password',
+  'mn-select',
   'restangular',
   'angular-loading-bar',
   'ngAnimate',
