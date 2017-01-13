@@ -12,6 +12,4 @@ function UsersController(list, data) {
     'Targaryen',
     'Snow',
   ]
-
-  this.save = () => console.log(this.data.plain())
 }
