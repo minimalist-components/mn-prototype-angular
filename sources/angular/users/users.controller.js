@@ -4,13 +4,13 @@ angular
 
 function UsersController(list, data) {
   this.list = list
-  // data.house = 'targaryen'
   this.data = data
 
   this.options = [
-    {name: 'Stark', value: 'stark'},
-    {name: 'Lannister', value: 'lannister'},
-    {name: 'Targaryen', value: 'targaryen'},
+    'Stark',
+    'Lannister',
+    'Targaryen',
+    'Snow',
   ]
 
   this.save = () => console.log(this.data.plain())
