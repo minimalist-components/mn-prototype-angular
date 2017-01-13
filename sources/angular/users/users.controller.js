@@ -13,5 +13,5 @@ function UsersController(list, data) {
     {name: 'Targaryen', value: 'targaryen'},
   ]
 
-  this.save = () => console.log(this.data.plain().house)
+  this.save = () => console.log(this.data.plain())
 }
