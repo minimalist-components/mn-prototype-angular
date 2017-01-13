@@ -1,7 +1,7 @@
 .layout-container
   h2 User
 
-  mn-form(submit='users.data.save()')
+  mn-form(submit='users.save()')
     .mn-card.padding
       .layout-column.layout-sm-row
         mn-input.flex(name='username' placeholder='username' ng-model='users.data.username' required)
@@ -11,24 +11,9 @@
       .layout-column.layout-sm-row
         mn-input.flex(name='email' placeholder='email' type='email' ng-model='users.data.email' required)
 
-        mn-select.flex-sm(placeholder='House')
-          option(value='stark' selected) Stark
-          option(value='targaryen') Targaryen
-          option(value='lannister') Lannister
-          option(value='tyrell') Tyrell
-          option(value='baratheon') Baratheon
-          option(value='bolton') Bolton
-          option(value='martell') Martell
-          option(value='tully') Tully
-          option(value='arryn') Arryn
-          option(value='mormont') Mormont
-          option(value='greyjoy') Greyjoy
-          option(value='frey') Frey
-          option(value='forrester') Forrester
-          option(value='karstark') Karstark
-          option(value='north') from the North
-          option(value='vale') from the Vale
-          option(value='dorne') from Dorne
+        mn-select.flex-sm(placeholder='House' ng-model='users.data.house' required)
+          option(ng-repeat='option in users.options' ng-value='option.value') {{ option.name }}
+
 
       //- .layout-column.layout-sm-row(ng-show='!users.data._id')
         mn-input.flex(name='password' placeholder='password' type='password' ng-model='users.data.password' required)
@@ -38,4 +23,5 @@
       button.mn-button(ui-sref='^') Cancel
       button.mn-button.raised(type='submit') Save
 
+    p model:  {{ users.data.house }}
 
