@@ -1,14 +1,14 @@
 .layout-container
   h2 Users
 
-  .mn-table-list.mn-card(ng-if='users.list.length')
+  .list.mn-table-list.mn-card(ng-if='users.list.length')
     button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
     a.mn-item(ui-sref='app.users.edit({id: user.username})' ng-repeat='user in users.list')
       span {{ :: user.firstname }} {{ :: user.lastname }}
       span {{ :: user.email }}
 
-  div(ng-if='!users.list.length')
-    .empty-list.mn-card.padding.align-center
+  .list.empty(ng-if='!users.list.length')
+    .mn-card.padding.align-center
       h2 no results
       p enjoy your time :D
 

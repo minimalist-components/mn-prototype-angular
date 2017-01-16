@@ -1,23 +1,28 @@
-.mn-card.mn-table-list {position: relative}
+.list {
+  position: relative;
 
-.mn-card .mn-button.action.raised {
-  position: absolute;
-  right: 0;
-  top: 2.5em;
+  h2:first-child {margin-top: 1rem}
 
-  @media (min-width: 767px) {
-    transform: translate(0, 0);
+  .mn-button.action.raised {
+    position: absolute;
+    right: 0;
+    top: 2.5em;
+
+    @media (min-width: 767px) {
+      transform: translate(0, 0);
+    }
+
+    @media (min-width: 768px) {
+      transform: translate(50%, 0);
+    }
   }
 
-  @media (min-width: 768px) {
-    transform: translate(50%, 0);
+  .empty {
+    text-align: center;
+
+    h2 {
+      margin-top: 1rem;
+    }
   }
 }
 
-.empty-list {
-  text-align: center;
-
-  h2 {
-    margin-top: 1rem;
-  }
-}
