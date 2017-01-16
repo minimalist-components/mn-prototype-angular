@@ -1,5 +1,9 @@
 .layout-container
-  h2 Users
+  header.layout-row
+    h2.flex Users
+    button.mn-button.action: i.zmdi.zmdi-playlist-plus
+    button.mn-button.action: i.zmdi.zmdi-search
+
 
   .list.mn-table-list.mn-card(ng-if='users.list.length')
     button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
@@ -14,7 +18,6 @@
 
     .layout-row.align-end
       button.mn-button.raised(ui-sref='app.users.create') add a user
-
 
   div.layout-row.align-end
     button.mn-button.action(aria-label='Prev' disabled): i.zmdi.zmdi-chevron-left
