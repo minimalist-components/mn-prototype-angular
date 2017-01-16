@@ -26,3 +26,44 @@
   }
 }
 
+
+.filters {
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: none;
+  margin-bottom: 1em;
+
+  .filter {
+    display: inline-block;
+    white-space: inherit;
+    background: $oc-blue-3;
+    color: $oc-gray-9;
+    padding: .4em 1em;
+    border-radius: 10px;
+    position: relative;
+    transition: padding-right .2s ease;
+
+    &.quick {background: none}
+
+    &:hover {
+      padding-right: calc(20px + .4em);
+      button {opacity: 1}
+    }
+
+    button {
+      -webkit-appearance: none;
+      border: 0;
+      background: none;
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      opacity: 0;
+      transform: translate(0, -50%);
+      transition: opacity .2s ease;
+      outline: 0;
+    }
+  }
+
+  .filter + .filter {margin-left: .5em}
+}
+
