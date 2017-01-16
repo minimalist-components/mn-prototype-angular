@@ -1,22 +1,22 @@
 .layout-container
   h2 Users
 
-  .mn-table-list.mn-card
+  .mn-table-list.mn-card(ng-if='users.list.length')
     button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
     a.mn-item(ui-sref='app.users.edit({id: user.username})' ng-repeat='user in users.list')
       span {{ :: user.firstname }} {{ :: user.lastname }}
       span {{ :: user.email }}
 
-  //- .mn-card
-    .layout-row.align-center
-      div
-        h2 no results
-        p enjoy you time :D
-      div
-        img(src='https://d13yacurqjgara.cloudfront.net/users/754789/screenshots/2381650/gif-aviao.gif')
+  div(ng-if='!users.list.length')
+    .empty-list.mn-card.padding.align-center
+      h2 no results
+      p enjoy your time :D
+
+    .layout-row.align-end
+      button.mn-button.raised(ui-sref='app.users.create') add a user
 
 
-  div.layout-row.align-end
+  //- div.layout-row.align-end
     button.mn-button.action(aria-label='Prev' disabled): i.zmdi.zmdi-chevron-left
     | 1 of 3
     button.mn-button.action(aria-label='Next'): i.zmdi.zmdi-chevron-right
