@@ -13,6 +13,8 @@ function npmPack() {
   function getMainFile(modulePath) {
     const packageJSON = require(`${modulePath}/package.json`)
     const mainFile = packageJSON.main
+      ? packageJSON.main.replace(/^\.\//, '')
+      : packageJSON.main
 
     Object
       .keys(packageJSON.dependencies)
@@ -36,7 +38,10 @@ function npmPack() {
     if (distExists) {
       const distFiles = fs.readdirSync(dist)
 
-      distFiles.forEach(distFile => dependencies.push(`${dist}/${distFile}`))
+      distFiles.forEach(distFile => {
+        if (dependencies.indexOf(`${dist}/${distFile}`) === -1)
+        dependencies.push(`${dist}/${distFile}`)
+      })
     }
   }
 }
