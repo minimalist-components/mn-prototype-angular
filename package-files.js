@@ -1,6 +1,6 @@
-module.exports = console.log(npmFiles())
+module.exports = console.log(packgeFiles())
 
-function npmFiles() {
+function packgeFiles() {
   const files = []
 
   getDependencies('./package.json')
