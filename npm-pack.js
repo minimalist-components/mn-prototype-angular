@@ -1,47 +1,58 @@
-module.exports = console.log(npmPack())
+module.exports = console.log(npmFiles())
 
-function npmPack() {
-  const packageJSON = require('./package.json')
-  const dependencies = []
+function npmFiles() {
+  const files = []
 
-  Object
-    .keys(packageJSON.dependencies)
-    .forEach(dependency => getMainFile(`./node_modules/${dependency}`))
+  getDependencies('./package.json')
 
-  return dependencies
+  return Object
+    .keys(files)
+    .map(key => files[key])
 
-  function getMainFile(modulePath) {
-    const packageJSON = require(`${modulePath}/package.json`)
-    const mainFile = packageJSON.main
-      ? packageJSON.main.replace(/^\.\//, '')
-      : packageJSON.main
+  function getDependencies(pathToPackageJSON) {
+    const packageJSON = require(pathToPackageJSON)
 
     Object
       .keys(packageJSON.dependencies)
       .forEach(dependency => {
-        const pathToDependency = `./node_modules/${dependency}`
-        getMainFile(pathToDependency)
-        getDistFiles(pathToDependency)
-      })
+        const modulePath = `./node_modules/${dependency}`
+        const packageJSON = require(`${modulePath}/package.json`)
+        getDependencies(`${modulePath}/package.json`)
 
-    getDistFiles(modulePath)
-    if (mainFile && dependencies.indexOf(`${modulePath}/${mainFile}`) === -1) {
-      dependencies.push(`${modulePath}/${mainFile}`)
-    }
+        if (packageJSON.files) {
+          packageJSON.files
+            .forEach(getFiles)
+
+          function getFiles(file) {
+            const fs = require('fs')
+            file = file.replace(/\.\//, '')
+            const packageFile = `${modulePath}/${file}`
+            try {
+              const stats = fs.lstatSync(packageFile)
+
+              if (stats.isDirectory()) {
+                const packageFiles = fs.readdirSync(packageFile)
+                  packageFiles.forEach(file => {
+                    pushFile(packageFile.concat('/', file))
+                  })
+              } else {
+                pushFile(packageFile)
+              }
+            } catch (e) {}
+          }
+        }
+
+        if (packageJSON.main) {
+          const mainFile = packageJSON.main.replace(/\.\//, '')
+          pushFile(modulePath.concat('/', mainFile))
+        }
+      })
   }
 
-  function getDistFiles(modulePath) {
-    const fs = require('fs')
-    const dist = `${modulePath}/dist`
-    const distExists = fs.existsSync(dist)
-
-    if (distExists) {
-      const distFiles = fs.readdirSync(dist)
-
-      distFiles.forEach(distFile => {
-        if (dependencies.indexOf(`${dist}/${distFile}`) === -1)
-        dependencies.push(`${dist}/${distFile}`)
-      })
+  function pushFile(pathFile) {
+    const pathUnused = files.indexOf(pathFile) === -1
+    if (pathUnused) {
+      files.push(pathFile)
     }
   }
 }
