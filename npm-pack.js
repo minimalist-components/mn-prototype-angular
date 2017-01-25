@@ -8,6 +8,7 @@ function npmFiles() {
   return Object
     .keys(files)
     .map(key => files[key])
+    .map(path => path.replace(/\.(\/node_modules)/, `${process.env.PWD}$1`))
 
   function getDependencies(pathToPackageJSON) {
     const packageJSON = require(pathToPackageJSON)
