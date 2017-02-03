@@ -1,22 +1,19 @@
 import gulp from 'gulp'
-import bowerFiles from 'bower-files'
+import packageFiles from 'package-files'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
-// import packageFiles from 'package-files'
+import webpack from 'webpack-stream'
+import webpack2 from 'webpack'
 
 gulp.task('vendorJS', vendorJSTask)
 
 function vendorJSTask() {
-  // const packageDependencies = packageFiles().filter(file => file.endsWith('.css'))
-  // console.log(packageDependencies)
-  // return false
-
-  const dependencies = bowerFiles()
-    .ext('js')
-    .files
+  const dependencies = packageFiles()
+    .filter(file => file.endsWith('.js'))
 
   return gulp
     .src(dependencies)
+    .pipe(webpack({}, webpack2))
     .pipe(concat('vendor.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./public/scripts'))

@@ -1,15 +1,14 @@
 import gulp from 'gulp'
 import bowerFiles from 'bower-files'
+import packageFiles from 'package-files'
 import minifyCss from 'gulp-minify-css'
 import concat from 'gulp-concat'
 
 gulp.task('vendorCSS', vendorCSSTask)
 
 function vendorCSSTask() {
-  const dependencies = bowerFiles()
-    .ext('css')
-    .match('!**/open-color.css')
-    .files
+  const dependencies = packageFiles()
+    .filter(file => file.endsWith('.css'))
 
   return gulp
     .src(dependencies)
