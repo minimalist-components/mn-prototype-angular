@@ -9,7 +9,8 @@ This is an application prototype, based with angular, and using mn-components to
 - [ ] toolbar
 - [x] list view
 - [x] form view
-
+- [x] api as dependency
+- [ ] migration database
 
 ## Demo
 
