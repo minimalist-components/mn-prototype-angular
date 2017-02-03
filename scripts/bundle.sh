@@ -2,4 +2,4 @@
 
 set -e
 
-./node_modules/gulp/bin/gulp.js vendorCSS vendorJS
+./node_modules/gulp/bin/gulp.js vendorCSS vendorJS --silent

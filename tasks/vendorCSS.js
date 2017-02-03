@@ -9,8 +9,6 @@ function vendorCSSTask() {
   const dependencies = packageFiles()
     .filter(file => file.endsWith('.css'))
 
-  console.log(dependencies)
-
   return gulp
     .src(dependencies)
     .pipe(concat('vendor.css'))
