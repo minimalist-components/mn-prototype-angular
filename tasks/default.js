@@ -7,6 +7,7 @@ gulp.task('default', [
   'browser-sync',
   'styles',
   'scripts',
+  'fonts',
   'lint',
   'watch',
 ])

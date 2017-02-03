@@ -1,10 +1,13 @@
 import gulp from 'gulp'
-import {fonts} from './config.js'
+import packageFiles from 'package-files'
 
 gulp.task('fonts', fontsTask)
 
 function fontsTask() {
+  const fonts = packageFiles()
+    .filter(file => file.match(/\.(eot|svg|ttf|woff|woff2)$/))
+
   return gulp
-    .src(fonts.src)
-    .pipe(gulp.dest(fonts.dest))
+    .src(fonts)
+    .pipe(gulp.dest('./public/fonts/'))
 }

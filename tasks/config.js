@@ -30,14 +30,6 @@ module.exports = {
     ],
     dest: './public/scripts/',
   },
-  fonts: {
-    src: './sources/fonts/*',
-    dest: './public/fonts/',
-  },
-  fonts: {
-    src: './sources/fonts/**',
-    dest: './public/fonts',
-  },
   browserSync: browserSync.create(),
   browserSyncOptions: {
     server: {
