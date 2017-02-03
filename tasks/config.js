@@ -3,7 +3,6 @@ import yargs from 'yargs'
 
 module.exports = {
   lint: [
-    'npm-pack.js',
     './gulpfile.babel.js',
     './test/**/*.js',
     './sources/angular/**/*.js',
