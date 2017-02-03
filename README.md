@@ -28,5 +28,5 @@ npm install
 npm start
 ```
 
-Important, you need have in your machine `node.js` and `gulp` as global module.
+Important, you need have in your machine `node.js` and `npm`.
 If you dont have any of these, look for the better way to install [node.js](https://nodejs.org/en/)
