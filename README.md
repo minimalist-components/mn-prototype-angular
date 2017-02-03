@@ -4,10 +4,11 @@ This is an application prototype, based with angular, and using mn-components to
 
 ## Todos
 
-- [ ] login view
-- [ ] sidenav, toolbar
-- [ ] list view
-- [ ] form view
+- [x] login view
+- [x] sidenav
+- [ ] toolbar
+- [x] list view
+- [x] form view
 
 
 ## Demo
@@ -17,14 +18,14 @@ This is an application prototype, based with angular, and using mn-components to
 If you want view a demo, just clone/fork this repo, and:
 
 ```sh
-# install dependencies, and prepare theirs to front
-npm i && bower i && gulp vendorCSS vendorJS
+# install dependencies
+npm install
 ```
 
-```
-# start project in local environment
-gulp
+```sh
+# to start project
+npm start
 ```
 
 Important, you need have in your machine `node.js` and `gulp` as global module.
-If you dont have any of these, look for the better way to install [node.js](https://nodejs.org/en/), and after done, install `gulp` with `npm i -g gulp`.
+If you dont have any of these, look for the better way to install [node.js](https://nodejs.org/en/)
