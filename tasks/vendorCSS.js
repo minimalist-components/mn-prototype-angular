@@ -1,5 +1,4 @@
 import gulp from 'gulp'
-import bowerFiles from 'bower-files'
 import packageFiles from 'package-files'
 import minifyCss from 'gulp-minify-css'
 import concat from 'gulp-concat'
@@ -9,6 +8,8 @@ gulp.task('vendorCSS', vendorCSSTask)
 function vendorCSSTask() {
   const dependencies = packageFiles()
     .filter(file => file.endsWith('.css'))
+
+  console.log(dependencies)
 
   return gulp
     .src(dependencies)

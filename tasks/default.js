@@ -5,7 +5,6 @@ gulp.task('default', [
   'templates',
   'api',
   'browser-sync',
-  'sprites',
   'styles',
   'scripts',
   'lint',
