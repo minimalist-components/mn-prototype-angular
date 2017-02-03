@@ -1,49 +1,29 @@
 import gulp from 'gulp'
-import gutil from 'gulp-util'
-import bowerFiles from 'bower-files'
-import path from 'path'
-import inject from 'gulp-inject'
 import sass from 'gulp-sass'
-import autoprefixer from 'gulp-autoprefixer'
 import sourcemaps from 'gulp-sourcemaps'
-import config from './config.js'
+import autoprefixer from 'gulp-autoprefixer'
 import plumber from 'gulp-plumber'
-
-const injectTransform = {
-  starttag: '/* inject:imports */',
-  endtag: '/* endinject */',
-  transform: filepath => `@import '../..${filepath}';`,
-}
-
-const injectConfig = {
-  read: false,
-  relative: false,
-}
+import gutil from 'gulp-util'
+import {browserSync, styles} from './config.js'
 
 const outputStyle = 'compressed'
 
 gulp.task('styles', stylesTask)
 
 function stylesTask() {
-  const dependencies = bowerFiles()
-    .relative(path.join(__dirname, '..'))
-    .ext('scss')
-    .files
-
   gulp
-    .src(config.styles.src)
+    .src(styles.src)
     .pipe(plumber({errorHandler}))
-    .pipe(inject(gulp.src(dependencies, injectConfig), injectTransform))
     .pipe(sourcemaps.init())
     .pipe(sass({outputStyle}))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest(config.styles.dest))
-    .pipe(config.browserSync.stream({match: '**/*.css'}))
+    .pipe(gulp.dest(styles.dest))
+    .pipe(browserSync.stream({match: '**/*.css'}))
 }
 
 function errorHandler(err) {
-  const message = new gutil.PluginError(err.plugin, err.message).toString()
+  let message = new gutil.PluginError('gulp-sass', err.messageFormatted).toString()
   process.stderr.write(message + '\n')
   gutil.beep()
 }
