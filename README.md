@@ -28,5 +28,5 @@ npm install
 npm start
 ```
 
-Important, you need have in your machine `node.js` and `npm`.
-If you dont have any of these, look for the better way to install [node.js](https://nodejs.org/en/)
+Important, you need have in your machine `node.js`, `npm`, and `mongodb`
+look for the better way to install [node.js](https://nodejs.org/en/) or [mongodb](https://docs.mongodb.com/manual/installation)
