@@ -1,6 +1,6 @@
 import gulp from 'gulp'
 import gutil from 'gulp-util'
-import jade from 'gulp-jade'
+import pug from 'gulp-pug'
 import config from './config.js'
 import plumber from 'gulp-plumber'
 
@@ -10,7 +10,7 @@ function viewsTask() {
   return gulp
     .src(config.views.src)
     .pipe(plumber({errorHandler}))
-    .pipe(jade())
+    .pipe(pug())
     .pipe(gulp.dest(config.views.dest))
 }
 

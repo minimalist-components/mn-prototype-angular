@@ -1,6 +1,6 @@
 import gulp from 'gulp'
 import gutil from 'gulp-util'
-import jade from 'gulp-jade'
+import pug from 'gulp-pug'
 import flatten from 'gulp-flatten'
 import {templates} from './config.js'
 import plumber from 'gulp-plumber'
@@ -13,7 +13,7 @@ function templatesTask() {
     .src(templates.src)
     .pipe(changed(templates.dest))
     .pipe(plumber({errorHandler}))
-    .pipe(jade())
+    .pipe(pug())
     .pipe(flatten())
     .pipe(gulp.dest(templates.dest))
 }
