@@ -9,12 +9,12 @@ module.exports = {
     './tasks/*.js',
   ],
   views: {
-    src: './sources/views/*.jade',
-    watch: './sources/views/**/*.jade',
+    src: './sources/views/*.pug',
+    watch: './sources/views/**/*.pug',
     dest: './public/',
   },
   templates: {
-    src: './sources/angular/**/*.template.jade',
+    src: './sources/angular/**/*.template.pug',
     dest: './public/templates/',
   },
   styles: {
