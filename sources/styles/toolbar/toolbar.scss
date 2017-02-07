@@ -3,14 +3,14 @@
   top: 0; left: 0;
   width: 100vw;
   height: 3em;
-  border-bottom: 1px solid #ced4da;
+  border-bottom: 1px solid $oc-gray-4;
   overflow: auto;
   z-index: 5;
   box-sizing: border-box;
   padding: 0 1em;
   align-items: center;
   display: flex;
-  background-color: #e6ebee;
+  background-color: $oc-gray-1;
 
   & + * {
     min-height: calc(100vh - 3em);
