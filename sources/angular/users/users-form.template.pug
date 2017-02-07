@@ -1,5 +1,7 @@
 .mn-layout-container
-  h2 User
+  h2 
+    a.back-button(ui-sref='^') Users
+    | {{ :: users.data._id ? users.data.username : 'New user' }}
 
   mn-form(submit='users.data.save()')
     .mn-card.padding

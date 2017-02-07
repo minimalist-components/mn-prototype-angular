@@ -3,3 +3,22 @@ button.mn-button.raised {
   color: #fff;
 }
 
+.back-button {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom .2s ease;
+  font-size: .65em;
+  display: table;
+  color: $oc-gray-7;
+
+  &:before {
+    content: '\f2fa';
+    font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+    margin-right: .5em;
+  }
+
+  &:hover {
+    border-bottom: 1px solid $oc-gray-7;
+  }
+}
+
