@@ -5,6 +5,7 @@ angular
 function LoginRun($rootScope, $state, Authentication) {
   $rootScope.$on('$stateChangeStart', logoutInLoginState)
   $rootScope.$on('$stateChangeStart', requireAuthentication)
+  $rootScope.$on('$stateChangeError', unauthorized)
 
   function logoutInLoginState(event, toState) {
     if (toState.name === 'login') {
@@ -18,6 +19,12 @@ function LoginRun($rootScope, $state, Authentication) {
 
     if (stateRequireLogin && !isAuthenticated) {
       event.preventDefault()
+      $state.go('login')
+    }
+  }
+
+  function unauthorized(event, toState, toParams, fromState, fromParams, error) {
+    if (error.status === 401) {
       $state.go('login')
     }
   }
