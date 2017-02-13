@@ -1,4 +1,4 @@
-.list {
+.mn-table-list {
   position: relative;
 
   h2:first-child {margin-top: 1rem}
@@ -7,6 +7,7 @@
     position: absolute;
     right: 0;
     top: 2.5em;
+    z-index: 10;
 
     @media (min-width: 767px) {
       transform: translate3d(0, 0, 0);
