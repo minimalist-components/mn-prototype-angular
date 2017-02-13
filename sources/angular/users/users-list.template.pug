@@ -21,8 +21,8 @@
   .list.mn-table-list.mn-card(ng-if='users.list.length')
     button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
     a.mn-item(ui-sref='app.users.edit({id: user.username})' ng-repeat='user in users.list')
-      span {{ :: user.firstname }} {{ :: user.lastname }}
-      span {{ :: user.email }}
+      span.flex {{ :: user.firstname }} {{ :: user.lastname }}
+      span.flex {{ :: user.email }}
 
   .list.empty(ng-if='!users.list.length')
     .mn-card.padding.align-center
