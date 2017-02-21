@@ -20,7 +20,7 @@
     button.mn-button.action.raised(ui-sref='app.users.create'): i.zmdi.zmdi-plus
 
     .mn-table-list
-      a.mn-item(ui-sref='app.users.edit({id: user.username})' ng-repeat='user in users.list')
+      a.mn-item.mn-layout-column.mn-layout-sm-row(ui-sref='app.users.edit({id: user.username})' ng-repeat='user in users.list')
         span.flex {{ :: user.firstname }} {{ :: user.lastname }}
         span.flex {{ :: user.email }}
 
