@@ -1,8 +1,5 @@
 import {internet} from 'faker'
-import {
-  Selector as querySelector,
-  ClientFunction,
-} from 'testcafe'
+import {Selector as querySelector} from 'testcafe'
 
 class LoginPageObject {
   constructor(page) {

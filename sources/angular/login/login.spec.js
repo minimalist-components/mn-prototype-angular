@@ -14,7 +14,7 @@ fixture `login`
     login = new PageObject(page)
   })
 
-  test('simple', () => {
-    expect(true).to.be.true
+  test('simple', async () => {
+    await expect(login.username.exists).to.eventually.be.true
   })
 

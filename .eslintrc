@@ -1,3 +1,9 @@
 {
-    "extends": "angular-mn-component"
+  "plugins": [
+    "testcafe"
+  ],
+  "extends": [
+    "angular-mn-component",
+    "plugin:testcafe/recommended"
+  ]
 }
