@@ -26,6 +26,7 @@ module.exports = {
     src: [
       './sources/angular/**/*.js',
       '!./sources/angular/**/*.spec.js',
+      '!./sources/angular/**/*.po.js',
     ],
     dest: './public/scripts/',
   },
