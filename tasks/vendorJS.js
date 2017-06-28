@@ -1,7 +1,7 @@
 const gulp = require('gulp')
 const packageFiles = require('package-files')
 const concat = require('gulp-concat')
-const uglify = require('gulp-uglify')
+const minify = require('gulp-babili')
 const webpack = require('webpack-stream')
 const webpack2 = require('webpack')
 
@@ -15,6 +15,6 @@ function vendorJSTask() {
     .src(dependencies)
     .pipe(webpack({}, webpack2))
     .pipe(concat('vendor.js'))
-    .pipe(uglify())
+    .pipe(minify({mangle: true}))
     .pipe(gulp.dest('./public/scripts'))
 }
