@@ -1,4 +1,15 @@
+// open-color
 @import '../../node_modules/open-color/open-color.scss';
+
+// minimalist
+@import '../../node_modules/minimalist/webcomponents/input/input.style.scss';
+@import '../../node_modules/minimalist/webcomponents/password/password.style.scss';
+@import '../../node_modules/minimalist/webcomponents/number/number.style.scss';
+@import '../../node_modules/minimalist/webcomponents/date/date.style.scss';
+@import '../../node_modules/minimalist/webcomponents/backdrop/backdrop.style.scss';
+@import '../../node_modules/minimalist/webcomponents/card/card.style.scss';
+@import '../../node_modules/minimalist/webcomponents/action-sheet/action-sheet.style.scss';
+@import '../../node_modules/minimalist/webcomponents/select/select.style.scss';
 
 @import 'identity/background';
 @import 'identity/container';

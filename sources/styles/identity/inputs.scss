@@ -1,3 +1,12 @@
-.mn-card .mn-input {
-  box-shadow: 0 1px $oc-gray-1;
+.mn-input {
+  --selection-color: $oc-blue-2;
+
+  &.focus {
+    --border-color: $oc-blue-3;
+    --placeholder-color: $oc-blue-4;
+  }
+}
+
+.mn-select {
+  --option-background: $oc-blue-3;
 }
