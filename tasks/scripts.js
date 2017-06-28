@@ -1,12 +1,12 @@
-import gulp from 'gulp'
-import gutil from 'gulp-util'
-import babel from 'gulp-babel'
-import sourcemaps from 'gulp-sourcemaps'
-import config from './config.js'
-import plumber from 'gulp-plumber'
-import concat from 'gulp-concat'
-import uglify from 'gulp-uglify'
-import ngAnnotate from 'gulp-ng-annotate'
+const gulp = require('gulp')
+const gutil = require('gulp-util')
+const babel = require('gulp-babel')
+const sourcemaps = require('gulp-sourcemaps')
+const config = require('./config.js')
+const plumber = require('gulp-plumber')
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglify')
+const ngAnnotate = require('gulp-ng-annotate')
 
 gulp.task('scripts', scriptsTask)
 

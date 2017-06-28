@@ -1,5 +1,5 @@
-import gulp from 'gulp'
-import packageFiles from 'package-files'
+const gulp = require('gulp')
+const packageFiles = require('package-files')
 
 gulp.task('fonts', fontsTask)
 

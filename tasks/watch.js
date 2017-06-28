@@ -1,12 +1,12 @@
-import gulp from 'gulp'
-import {
+const gulp = require('gulp')
+const {
   browserSync,
   views,
   styles,
   scripts,
   templates,
   lint,
-} from './config.js'
+} = require('./config.js')
 
 gulp.task('watch', watchTask)
 

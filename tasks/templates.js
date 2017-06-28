@@ -1,10 +1,10 @@
-import gulp from 'gulp'
-import gutil from 'gulp-util'
-import pug from 'gulp-pug'
-import flatten from 'gulp-flatten'
-import {templates} from './config.js'
-import plumber from 'gulp-plumber'
-import changed from 'gulp-changed'
+const gulp = require('gulp')
+const gutil = require('gulp-util')
+const pug = require('gulp-pug')
+const flatten = require('gulp-flatten')
+const {templates} = require('./config.js')
+const plumber = require('gulp-plumber')
+const changed = require('gulp-changed')
 
 gulp.task('templates', templatesTask)
 

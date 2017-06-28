@@ -1,7 +1,7 @@
-import gulp from 'gulp'
-import {browserSync, browserSyncOptions} from './config.js'
-import historyApi from 'connect-history-api-fallback'
-import gzip from 'compression'
+const gulp = require('gulp')
+const {browserSync, browserSyncOptions} = require('./config.js')
+const historyApi = require('connect-history-api-fallback')
+const gzip = require('compression')
 
 gulp.task('browser-sync', browserSyncTask)
 

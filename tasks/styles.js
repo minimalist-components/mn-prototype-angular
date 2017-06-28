@@ -1,10 +1,10 @@
-import gulp from 'gulp'
-import sass from 'gulp-sass'
-import sourcemaps from 'gulp-sourcemaps'
-import autoprefixer from 'gulp-autoprefixer'
-import plumber from 'gulp-plumber'
-import gutil from 'gulp-util'
-import {browserSync, styles} from './config.js'
+const gulp = require('gulp')
+const sass = require('gulp-sass')
+const sourcemaps = require('gulp-sourcemaps')
+const autoprefixer = require('gulp-autoprefixer')
+const plumber = require('gulp-plumber')
+const gutil = require('gulp-util')
+const {browserSync, styles} = require('./config.js')
 
 const outputStyle = 'compressed'
 

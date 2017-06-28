@@ -1,5 +1,5 @@
-import browserSync from 'browser-sync'
-import yargs from 'yargs'
+const browserSync = require('browser-sync')
+const yargs = require('yargs')
 
 module.exports = {
   lint: [

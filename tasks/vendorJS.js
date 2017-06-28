@@ -1,9 +1,9 @@
-import gulp from 'gulp'
-import packageFiles from 'package-files'
-import concat from 'gulp-concat'
-import uglify from 'gulp-uglify'
-import webpack from 'webpack-stream'
-import webpack2 from 'webpack'
+const gulp = require('gulp')
+const packageFiles = require('package-files')
+const concat = require('gulp-concat')
+const uglify = require('gulp-uglify')
+const webpack = require('webpack-stream')
+const webpack2 = require('webpack')
 
 gulp.task('vendorJS', vendorJSTask)
 

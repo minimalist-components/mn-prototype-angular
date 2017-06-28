@@ -1,4 +1,4 @@
-import gulp from 'gulp'
+const gulp = require('gulp')
 console.info = () => null
 
 gulp.task('api', apiTask)

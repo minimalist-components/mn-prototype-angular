@@ -1,8 +1,8 @@
-import gulp from 'gulp'
-import gutil from 'gulp-util'
-import pug from 'gulp-pug'
-import config from './config.js'
-import plumber from 'gulp-plumber'
+const gulp = require('gulp')
+const gutil = require('gulp-util')
+const pug = require('gulp-pug')
+const config = require('./config.js')
+const plumber = require('gulp-plumber')
 
 gulp.task('views', viewsTask)
 

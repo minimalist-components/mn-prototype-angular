@@ -1,8 +1,8 @@
-import gulp from 'gulp'
-import {lint} from './config.js'
-import eslint from 'gulp-eslint'
-import gutil from 'gulp-util'
-import cache from 'gulp-cached'
+const gulp = require('gulp')
+const {lint} = require('./config.js')
+const eslint = require('gulp-eslint')
+const gutil = require('gulp-util')
+const cache = require('gulp-cached')
 
 gulp.task('lint', lintTask)
 

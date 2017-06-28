@@ -1,7 +1,7 @@
-import gulp from 'gulp'
-import packageFiles from 'package-files'
-import minifyCss from 'gulp-minify-css'
-import concat from 'gulp-concat'
+const gulp = require('gulp')
+const packageFiles = require('package-files')
+const minifyCss = require('gulp-minify-css')
+const concat = require('gulp-concat')
 
 gulp.task('vendorCSS', vendorCSSTask)
 
