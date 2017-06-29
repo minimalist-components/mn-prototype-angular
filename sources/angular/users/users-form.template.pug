@@ -6,13 +6,13 @@
   mn-form(submit='users.data.save()')
     .mn-card.padding
       .mn-layout-column.mn-layout-sm-row
-        mn-input.flex(name='username' placeholder='username' ng-model='users.data.username' required)
-        mn-input.flex(name='firstname' placeholder='firstname' ng-model='users.data.firstname' required)
+        mn-input.flex(placeholder='username' ng-model='users.data.username' required)
+        mn-input.flex(placeholder='firstname' ng-model='users.data.firstname' required)
         mn-select.flex-sm(placeholder='House' ng-model='users.data.lastname' required)
           option(ng-repeat='option in users.options' ng-value='option') {{ option }}
           
       .mn-layout-column.mn-layout-sm-row
-        mn-input.flex(name='email' placeholder='email' type='email' ng-model='users.data.email' required)
+        mn-email.flex(placeholder='email' ng-model='users.data.email' required)
 
     
     div.mn-layout-row.align-end
