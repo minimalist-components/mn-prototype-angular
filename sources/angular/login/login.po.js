@@ -5,6 +5,7 @@ class LoginPageObject {
   constructor(page) {
     this.page = page
 
+    this.inexistent = selector('mn-test')
     this.email = selector('mn-email')
     this.password = selector('mn-password')
     this.button = selector('button[type="submit"]')

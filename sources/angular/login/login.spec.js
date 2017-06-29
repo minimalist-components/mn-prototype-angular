@@ -1,6 +1,6 @@
 const PageObject = require('./login.po.js')
 const {expect} = require('chai')
-  .use(require('chai-as-promised'))
+  .use(require('./chai-test-cafe.js'))
 
 let login
 
@@ -10,7 +10,7 @@ fixture `login`
     login = new PageObject(page)
   })
 
-  test('simple', async () => {
-    await expect(login.email.exists).to.eventually.be.true
+  test('has a email', async () => {
+    await expect(login.email).to.exists
   })
 
