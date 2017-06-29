@@ -1,22 +1,22 @@
-import {internet} from 'faker'
-import {Selector as querySelector} from 'testcafe'
+const {internet} = require('faker')
+const {Selector} = require('testcafe')
 
 class LoginPageObject {
   constructor(page) {
     this.page = page
 
-    this.username = querySelector('mn-input[name="username"]')
-    this.password = querySelector('mn-password[name="password"]')
-    this.button = querySelector('button')
+    this.email = Selector('mn-input[name="email"]')
+    this.password = Selector('mn-password[name="password"]')
+    this.button = Selector('button')
   }
 
   async typeInvalidCredentials() {
-    await this.page.typeText(this.username.find('input'), internet.userName())
+    await this.page.typeText(this.email.find('input'), internet.userName())
     await this.page.typeText(this.password.find('input'), internet.password())
   }
 
   async typeValidCredentials() {
-    await this.page.typeText(this.username.find('input'), 'darlanmendonca@gmail.com')
+    await this.page.typeText(this.email.find('input'), 'darlanmendonca@gmail.com')
     await this.page.typeText(this.password.find('input'), 'hkswpnx')
   }
 

@@ -1,10 +1,6 @@
-import chai from 'chai'
-import {expect} from 'chai'
-import chaiAsPromised from 'chai-as-promised'
-import PageObject from './login.po.js'
-
-chai
-  .use(chaiAsPromised)
+const PageObject = require('./login.po.js')
+const {expect} = require('chai')
+  .use(require('chai-as-promised'))
 
 let login
 
@@ -15,6 +11,6 @@ fixture `login`
   })
 
   test('simple', async () => {
-    await expect(login.username.exists).to.eventually.be.true
+    await expect(login.email.exists).to.eventually.be.true
   })
 
