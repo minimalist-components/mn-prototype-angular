@@ -14,3 +14,30 @@ fixture `login`
     await expect(login.email).to.exists
   })
 
+  test('has a password', async () => {
+    await expect(login.password).to.exists
+  })
+
+  test('has a submit button', async () => {
+    await expect(login.button).to.exists
+  })
+
+  test('has a message hidden (wrong credentials)', async () => {
+    await expect(login.message).to.exists
+    await expect(login.message).to.have.text('The email or password you’ve entered doesn’t match any account')
+    await expect(login.message).to.not.have.class('visible')
+  })
+
+  test('submit empty form, show invalid fields', async () => {
+    await login.submit()
+    await expect(login.username).to.have.class('invalid')
+    await expect(login.password).to.have.class('invalid')
+    await expect(login.message).to.not.have.class('visible')
+  })
+
+  test('show message when try to login with invalid credentials', async () => {
+    await login.typeInvalidCredentials()
+    await login.submit()
+
+    await expect(login.message).to.have.class('visible')
+  })
