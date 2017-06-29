@@ -17,9 +17,19 @@ function LoginController(Authentication, $state) {
     Authentication
       .login(this.credentials)
       .then(redirectToHome)
+      .catch(unauthorized)
 
     function redirectToHome() {
       $state.go('app.home')
+    }
+
+    function unauthorized(error) {
+      if (error.statusText === 'Unauthorized') {
+        const message = document.querySelector('.invalid-credentials-message')
+        message.classList.add('visible')
+      }
+
+      return error
     }
   }
 }

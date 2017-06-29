@@ -1,13 +1,13 @@
 const {internet} = require('faker')
-const {Selector} = require('testcafe')
+const {Selector: selector} = require('testcafe')
 
 class LoginPageObject {
   constructor(page) {
     this.page = page
 
-    this.email = Selector('mn-input[name="email"]')
-    this.password = Selector('mn-password[name="password"]')
-    this.button = Selector('button')
+    this.email = selector('mn-email')
+    this.password = selector('mn-password')
+    this.button = selector('button[type="submit"]')
   }
 
   async typeInvalidCredentials() {

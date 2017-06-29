@@ -9,6 +9,18 @@
     max-width: 100%;
   }
 
+  .invalid-credentials-message {
+    color: $oc-red-7;
+    text-align: center;
+    transform: translateY(.5em);
+    opacity: 0;
+    transition: opacity .2s ease;
+
+    &.visible {
+      opacity: 1;
+    }
+  }
+
   .mn-button {
     margin: 2em 0 0;
   }
