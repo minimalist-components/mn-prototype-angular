@@ -10,11 +10,11 @@ fixture `login`
     login = new PageObject(page)
   })
 
-  test('has a email', async () => {
+  test('has a email input', async () => {
     await expect(login.email).to.exists
   })
 
-  test('has a password', async () => {
+  test('has a password input', async () => {
     await expect(login.password).to.exists
   })
 
@@ -40,4 +40,12 @@ fixture `login`
     await login.submit()
 
     await expect(login.message).to.have.class('visible')
+  })
+
+  test('successful login redirect to /users', async (page) => {
+    await login.typeValidCredentials()
+    await login.submit()
+    const {pathname} = await page.eval(() => window.location)
+
+    await expect(pathname).to.be.equal('/users')
   })

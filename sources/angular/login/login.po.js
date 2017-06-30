@@ -1,9 +1,11 @@
 const {internet} = require('faker')
 const {Selector: selector} = require('testcafe')
+// const {ClientFunction: clientFunction} = require('testcafe')
 
 class LoginPageObject {
   constructor(page) {
     this.page = page
+    // this.location = clientFunction(() => window.location)
 
     this.email = selector('mn-email')
     this.password = selector('mn-password')
