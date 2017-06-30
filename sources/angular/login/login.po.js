@@ -1,11 +1,9 @@
 const {internet} = require('faker')
 const {Selector: selector} = require('testcafe')
-// const {ClientFunction: clientFunction} = require('testcafe')
 
 class LoginPageObject {
   constructor(page) {
     this.page = page
-    // this.location = clientFunction(() => window.location)
 
     this.email = selector('mn-email')
     this.password = selector('mn-password')
@@ -19,8 +17,8 @@ class LoginPageObject {
   }
 
   async typeValidCredentials() {
-    await this.page.typeText(this.email.find('input'), 'darlanmendonca@gmail.com')
-    await this.page.typeText(this.password.find('input'), 'hkswpnx')
+    await this.page.typeText(this.email.find('input'), 'admin@admin.com')
+    await this.page.typeText(this.password.find('input'), 'admin')
   }
 
   async submit() {
