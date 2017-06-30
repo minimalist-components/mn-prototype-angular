@@ -28,6 +28,7 @@
     "browser-sync": "^2.8.0",
     "browserify": "^13.0.0",
     "chai": "^3.5.0",
+    "chai-as-promised": "^7.0.0",
     "compression": "^1.6.2",
     "connect-history-api-fallback": "^1.1.0",
     "eslint-config-angular-mn-component": "~0.0.1",

@@ -1,6 +1,7 @@
 const PageObject = require('./login.po.js')
 const {expect} = require('chai')
   .use(require('../../../chai-test-cafe.js'))
+  .use(require('chai-as-promised'))
 
 let login
 
@@ -47,8 +48,7 @@ fixture `login`
   test('successful login redirect to /users', async (page) => {
     await login.typeValidCredentials()
     await login.submit()
-    const {pathname} = await page.eval(() => window.location)
 
-    await page.wait(400)
-    await expect(pathname).to.equal('/users')
+    const url = page.eval(() => window.location.pathname)
+    await expect(url).to.eventually.equal('/users')
   })
