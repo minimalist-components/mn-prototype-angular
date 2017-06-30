@@ -12,7 +12,7 @@ class LoginPageObject {
   }
 
   async typeInvalidCredentials() {
-    await this.page.typeText(this.email.find('input'), internet.userName())
+    await this.page.typeText(this.email.find('input'), internet.email())
     await this.page.typeText(this.password.find('input'), internet.password())
   }
 

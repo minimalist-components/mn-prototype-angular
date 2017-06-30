@@ -30,7 +30,7 @@ fixture `login`
 
   test('submit empty form, show invalid fields', async () => {
     await login.submit()
-    await expect(login.username).to.have.class('invalid')
+    await expect(login.email).to.have.class('invalid')
     await expect(login.password).to.have.class('invalid')
     await expect(login.message).to.not.have.class('visible')
   })
