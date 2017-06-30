@@ -35,11 +35,13 @@ fixture `login`
     await expect(login.message).to.not.have.class('visible')
   })
 
-  test('show message when try to login with invalid credentials', async () => {
+  test('show message when try to login with invalid credentials', async (page) => {
     await login.typeInvalidCredentials()
     await login.submit()
+    const {pathname} = await page.eval(() => window.location)
 
     await expect(login.message).to.have.class('visible')
+    await expect(pathname).to.equal('/login')
   })
 
   test('successful login redirect to /users', async (page) => {
@@ -47,6 +49,6 @@ fixture `login`
     await login.submit()
     const {pathname} = await page.eval(() => window.location)
 
-    await page.wait(200)
+    await page.wait(400)
     await expect(pathname).to.equal('/users')
   })
