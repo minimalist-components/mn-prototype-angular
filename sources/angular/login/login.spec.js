@@ -1,6 +1,6 @@
 const PageObject = require('./login.po.js')
 const {expect} = require('chai')
-  .use(require('./chai-test-cafe.js'))
+  .use(require('../../../chai-test-cafe.js'))
 
 let login
 
@@ -47,5 +47,6 @@ fixture `login`
     await login.submit()
     const {pathname} = await page.eval(() => window.location)
 
-    await expect(pathname).to.be.equal('/users')
+    await page.wait(200)
+    await expect(pathname).to.equal('/users')
   })
