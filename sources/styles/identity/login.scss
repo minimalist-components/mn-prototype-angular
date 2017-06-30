@@ -23,12 +23,5 @@
 
   .mn-button {
     margin: 2em 0 0;
-
-    opacity: 0;
-    transition: opacity .2s ease;
-
-    &.visible {
-      opacity: 1;
-    }
   }
 }
