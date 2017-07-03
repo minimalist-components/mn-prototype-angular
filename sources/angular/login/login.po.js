@@ -8,16 +8,17 @@ class LoginPageObject {
     this.email = selector('mn-email')
     this.password = selector('mn-password')
     this.button = selector('button[type="submit"]')
+    this.message = selector('.invalid-credentials-message')
   }
 
   async typeInvalidCredentials() {
-    await this.page.typeText(this.email.find('input'), internet.userName())
+    await this.page.typeText(this.email.find('input'), internet.email())
     await this.page.typeText(this.password.find('input'), internet.password())
   }
 
   async typeValidCredentials() {
-    await this.page.typeText(this.email.find('input'), 'darlanmendonca@gmail.com')
-    await this.page.typeText(this.password.find('input'), 'hkswpnx')
+    await this.page.typeText(this.email.find('input'), 'admin@admin.com')
+    await this.page.typeText(this.password.find('input'), 'admin')
   }
 
   async submit() {
