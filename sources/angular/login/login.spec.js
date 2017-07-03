@@ -47,7 +47,7 @@ fixture `login`
     // await expect(login.password).to.have.class('.invalid.required')
   })
 
-  test('show message when try to login with invalid credentials', async (page) => {
+  test('show authentication message when try to login with invalid credentials', async (page) => {
     await login.typeInvalidCredentials()
     await login.submit()
     const {pathname} = await page.eval(() => window.location)
